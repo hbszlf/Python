@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SoundPredictActivity">
+
+    <Button
+        android:id="@+id/runBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Run"
+        app:layout_constraintLeft_toLeftOf="@id/browseModelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/browseSoundBtn" />
+
+    <EditText
+        android:id="@+id/durCntEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:inputType="number"
+        android:paddingHorizontal="18dp"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/runBtn"
+        app:layout_constraintLeft_toRightOf="@+id/runBtn" />
+
+    <EditText
+        android:id="@+id/modelPathEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="2dp"
+        android:text="browse model path"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/browseModelBtn"
+        app:layout_constraintLeft_toRightOf="@+id/browseModelBtn" />
+
+
+    <EditText
+        android:id="@+id/soundPathEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="2dp"
+        android:text="browse sound path"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/browseSoundBtn"
+        app:layout_constraintLeft_toRightOf="@+id/browseSoundBtn" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        app:layout_constraintLeft_toLeftOf="@+id/runBtn"
+        app:layout_constraintRight_toRightOf="@+id/durCntUnitTv"
+        app:layout_constraintTop_toBottomOf="@+id/runBtn" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="80dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/runBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        <EditText
+            android:id="@+id/pythonTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:focusable="false"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:paddingHorizontal="8dp"
+            android:scrollbars="vertical"
+            android:text="Hello World!"
+            android:textSize="12sp" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/browseSoundBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Load Sound"
+        app:layout_constraintLeft_toLeftOf="@+id/browseModelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/browseModelBtn" />
+
+    <TextView
+        android:id="@+id/browseModelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:text="Load Model"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/durCntUnitTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="次"
+        app:layout_constraintBaseline_toBaselineOf="@+id/durCntEt"
+        app:layout_constraintLeft_toRightOf="@+id/durCntEt" />
+</android.support.constraint.ConstraintLayout>

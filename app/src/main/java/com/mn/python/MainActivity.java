@@ -1,5 +1,6 @@
 package com.mn.python;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button runBtn;
     TextView resultTv;
 
+    TextView moreTestBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         resultTv = (TextView) findViewById(R.id.pythonTv);
         resultTv.setText("init python ...");
+
+        moreTestBtn = (TextView) findViewById(R.id.moreTestBtn);
+        moreTestBtn.setOnClickListener(this);
     }
 
 
@@ -114,6 +119,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.runBtn:
                 callPythonCode();
+                break;
+            case R.id.moreTestBtn:
+                Intent i = new Intent(MainActivity.this, SoundPredictActivity.class);
+                startActivity(i);
                 break;
         }
     }

@@ -25,4 +25,15 @@
         app:layout_constraintLeft_toLeftOf="@+id/runBtn"
         app:layout_constraintTop_toBottomOf="@+id/runBtn" />
 
+    <TextView
+        android:id="@+id/moreTestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Test"
+        app:layout_constraintLeft_toLeftOf="@+id/runBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"/>
+
 </android.support.constraint.ConstraintLayout>
